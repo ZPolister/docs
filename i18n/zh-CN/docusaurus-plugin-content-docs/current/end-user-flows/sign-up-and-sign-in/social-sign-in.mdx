@@ -79,16 +79,16 @@ sequenceDiagram
 
     ```mermaid
     flowchart TD
-    A[使用社交身份认证 (Authentication)] --> B{{社交身份在 Logto 中存在？}}
-    B -- 是 --> C[使用现有账户登录]
-    B -- 否 --> D{{邮箱/手机号匹配现有账户？}}
-    D -- 是 --> E{{启用自动账户关联？}}
-    E -- 是 --> G[将社交身份关联到现有账户]
-    G --> C
-    D -- 否 --> H[创建新账户并登录]
-    E -- 否 --> I{{关联社交账户？}}
-    I -- 是 --> G
-    I -- 否 --> H
+       A["使用社交身份认证 (Authentication)"] --> B{{社交身份在 Logto 中存在？}}
+       B -- 是 --> C[使用现有账户登录]
+       B -- 否 --> D{{邮箱/手机号匹配现有账户？}}
+       D -- 是 --> E{{启用自动账户关联？}}
+       E -- 是 --> G[将社交身份关联到现有账户]
+       G --> C
+       D -- 否 --> H[创建新账户并登录]
+       E -- 否 --> I{{关联社交账户？}}
+       I -- 是 --> G
+       I -- 否 --> H
     ```
 
 :::note
@@ -111,7 +111,7 @@ sequenceDiagram
 
    ```mermaid
    flowchart TD
-      A[使用社交身份认证 (Authentication)] --> B{{包含已验证邮箱地址？}}
+      A["使用社交身份认证 (Authentication)"] --> B{{包含已验证邮箱地址？}}
       B -- 是 --> C[输入用户名]
       C --> D[注册成功]
    ```
@@ -122,7 +122,7 @@ sequenceDiagram
 
    ```mermaid
    flowchart TD
-      A[使用社交身份认证 (Authentication)] --> B{{包含已验证邮箱地址？}}
+      A["使用社交身份认证 (Authentication)"] --> B{{包含已验证邮箱地址？}}
       B -- 否 --> C[输入邮箱地址]
       C --> D[输入验证码]
       D --> E[输入用户名]
@@ -135,7 +135,7 @@ sequenceDiagram
 
    ```mermaid
       flowchart TD
-       A[使用社交身份认证 (Authentication)] --> B{{邮箱地址匹配现有账户？}}
+       A["使用社交身份认证 (Authentication)"] --> B{{邮箱地址匹配现有账户？}}
        B -- 是 --> C{{关联社交账户？}}
        C -- 是 --> D[将社交身份关联到现有账户]
        D --> E[登录成功]
